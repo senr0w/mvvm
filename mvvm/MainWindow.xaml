@@ -16,13 +16,13 @@
             
             <TextBlock Text="Фильтр" Margin="10,5,5,5"/>
             <TextBox Text="{Binding FilterText,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="5"/>
-            <Button Width="100" Height="25" Margin="50,0,0,0" Content="Добавить" Command="{Binding AddStudentCommand}"/>
+            <Button Width="100" Height="25" Margin="50,0,0,0" Content="Добавить" Command="{Binding AddStudent}"/>
         </StackPanel>
-        <DataGrid Grid.Row="1" Margin="10,10,0,0" ItemsSource="{Binding Items}" AutoGenerateColumns="False">
+        <DataGrid Grid.Row="1" Margin="10,10,0,0" ItemsSource="{Binding Items, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>
-                <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}"/>
-                <DataGridTextColumn Header="Возраст" Binding="{Binding Age}"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="Возраст" Binding="{Binding Age, UpdateSourceTrigger=PropertyChanged}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

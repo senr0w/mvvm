@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight.Command;
 using mvvm.Model;
+using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
@@ -41,23 +42,22 @@ namespace mvvm.ViewModel
         public StudentViewModel()
         {
             Students = new ObservableCollection<Student>();
-
-            AddStudentCommand = new RelayCommand(AddStudent);
-            RemoveStudentCommand = new RelayCommand(RemoveStudent);
-            Items = CollectionViewSource.GetDefaultView(Student.GetStudents());
+            Items = CollectionViewSource.GetDefaultView(Students);
             Items.Filter = FilterStudent;
         }
-        private void AddStudent()
-        {
-            Student newStudent = new Student(){ FirstName = "Имя", LastName = "Фамилия", Age = 20 };
 
-         
-            Students.Add(newStudent);
-        }
 
-        private void RemoveStudent()
+        private MyCommand addStudent;
+        public MyCommand AddStudent
         {
-            
+            get
+            {
+                return addStudent ??
+                  (addStudent = new MyCommand(obj =>
+                  {
+                      Students.Add(new Student("Фамилия", "Имя", 100));
+                  }));
+            }
         }
 
 
@@ -72,4 +72,36 @@ namespace mvvm.ViewModel
             return result;
         }
     }
+
+    public class MyCommand : ICommand
+    {
+        
+        private Action<object> execute;
+        private Func<object, bool> canExecute;
+
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+
+        public MyCommand(Action<object> execute, Func<object, bool> canExecute = null)
+        {
+            this.execute = execute;
+            this.canExecute = canExecute;
+        }
+
+        public bool CanExecute(object parameter)
+        {
+            return this.canExecute == null || this.canExecute(parameter);
+        }
+
+        public void Execute(object parameter)
+        {
+            this.execute(parameter);
+        }
+    }
 }
+
+
+
