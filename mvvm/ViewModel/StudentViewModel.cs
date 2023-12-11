@@ -12,9 +12,6 @@ namespace mvvm.ViewModel
     public class StudentViewModel : DependencyObject
     {
         public ObservableCollection<Student> Students { get; set; }
-
-        public ICommand AddStudentCommand { get; }
-        public ICommand RemoveStudentCommand { get; }
         public string FilterText
         {
             get { return (string)GetValue(FilterTextProperty); }
@@ -55,10 +52,28 @@ namespace mvvm.ViewModel
                 return addStudent ??
                   (addStudent = new MyCommand(obj =>
                   {
-                      Students.Add(new Student("Фамилия", "Имя", 100));
+                      Students.Add(new Student("Фамилия" , "Имя", 10));
                   }));
             }
         }
+
+        private MyCommand deleteStudent;
+        public MyCommand DeleteStudent
+        {
+            get
+            {
+                return deleteStudent ??
+                    (deleteStudent = new MyCommand(obj =>
+                    {
+                        Student selectedStudent = obj as Student;
+                        if (selectedStudent != null)
+                        {
+                            Students.Remove(selectedStudent);
+                        }
+                    }));
+            }
+        }
+
 
 
         private bool FilterStudent(object obj)

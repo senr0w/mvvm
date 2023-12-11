@@ -25,3 +25,30 @@ C:\Users\User\Desktop\mvvm-master\mvvm\obj\Debug\mvvm.csproj.CoreCompileInputs.c
 C:\Users\User\Desktop\mvvm-master\mvvm\obj\Debug\mvvm.csproj.CopyComplete
 C:\Users\User\Desktop\mvvm-master\mvvm\obj\Debug\mvvm.exe
 C:\Users\User\Desktop\mvvm-master\mvvm\obj\Debug\mvvm.pdb
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\bin\Debug\mvvm.exe.config
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\bin\Debug\mvvm.exe
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\bin\Debug\mvvm.pdb
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\bin\Debug\CommonServiceLocator.dll
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\obj\Debug\mvvm.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\obj\Debug\MainWindow.g.cs
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\obj\Debug\App.g.cs
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\obj\Debug\mvvm_MarkupCompile.cache
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\obj\Debug\mvvm_MarkupCompile.lref
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\obj\Debug\MainWindow.baml
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\obj\Debug\mvvm.g.resources
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\obj\Debug\mvvm.Properties.Resources.resources
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\obj\Debug\mvvm.csproj.GenerateResource.cache
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\obj\Debug\mvvm.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\obj\Debug\mvvm.csproj.CopyComplete
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\obj\Debug\mvvm.exe
+C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\obj\Debug\mvvm.pdb

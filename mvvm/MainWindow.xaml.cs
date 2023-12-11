@@ -15,6 +15,7 @@ namespace mvvm
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             DataContext = new StudentViewModel();
+    
         }
     }
 }
