@@ -9,113 +9,100 @@ using System.Windows.Input;
 
 namespace mvvm.ViewModel
 {
-    public class StudentViewModel : DependencyObject
+    public class StudentViewModel : INotifyPropertyChanged, IDataErrorInfo
     {
-        public ObservableCollection<Student> Students { get; set; }
-        public string FilterText
+        public ObservableCollection<Student> Students { get; set; } = new ObservableCollection<Student>();
+        private Student _selectedStudent;
+        public Student SelectedStudent
         {
-            get { return (string)GetValue(FilterTextProperty); }
-            set { SetValue(FilterTextProperty, value); }
-        }
-        public static readonly DependencyProperty FilterTextProperty = DependencyProperty.Register("FilterText", typeof(string), typeof(StudentViewModel), new PropertyMetadata("", FilterText_Changed));
-
-        private static void FilterText_Changed(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            var current=d as StudentViewModel;
-            if(current != null)
+            get { return _selectedStudent; }
+            set
             {
-                current.Items.Filter = null;
-                current.Items.Filter = current.FilterStudent;
+                _selectedStudent = value;
+                OnPropertyChanged(nameof(SelectedStudent));
             }
         }
 
-        public ICollectionView Items
+        private string _newFirstName;
+        public string NewFirstName
         {
-            get { return (ICollectionView)GetValue(ItemsProperty); }
-            set { SetValue(ItemsProperty, value); }
+            get { return _newFirstName; }
+            set
+            {
+                _newFirstName = value;
+                OnPropertyChanged(nameof(NewFirstName));
+            }
         }
-        public static readonly DependencyProperty ItemsProperty = DependencyProperty.Register("Items", typeof(ICollectionView), typeof(StudentViewModel), new PropertyMetadata(null));
+        private int _newAge;
+        public int NewAge
+        {
+            get { return _newAge; }
+            set
+            {
+                _newAge = value;
+                OnPropertyChanged(nameof(NewAge));
+            }
+        }
+        private string _newLastName;
+        public string NewLastName
+        {
+            get { return _newLastName; }
+            set
+            {
+                _newLastName = value;
+                OnPropertyChanged(nameof(NewLastName));
+            }
+        }
+
+        public ICommand AddStudentCommand { get; private set; }
+
+        public ICommand RemoveStudentCommand { get; private set; }
+
+        public string Error => null;
+        public string this[string columnName]
+        {
+            get
+            {
+                if (columnName == "NewLastName" && string.IsNullOrWhiteSpace(NewLastName))
+                    return "Имя не может быть пустым";
+                if (columnName == "NewFirstName" && string.IsNullOrWhiteSpace(NewFirstName))
+                    return "Имя не может быть пустым";
+
+                if (columnName == "NewAge" && (NewAge < 16 || NewAge > 150))
+                    return "Возраст должен быть в диапазоне от 0 до 150";
+
+                return null;
+            }
+        }
 
         public StudentViewModel()
         {
-            Students = new ObservableCollection<Student>();
-            Items = CollectionViewSource.GetDefaultView(Students);
-            Items.Filter = FilterStudent;
+            RemoveStudentCommand = new RelayCommand(RemoveSelectedStudent);
+            AddStudentCommand = new RelayCommand(AddStudent);
         }
 
-
-        private MyCommand addStudent;
-        public MyCommand AddStudent
+        private void RemoveSelectedStudent()
         {
-            get
+            if (SelectedStudent != null)
             {
-                return addStudent ??
-                  (addStudent = new MyCommand(obj =>
-                  {
-                      Students.Add(new Student("Фамилия" , "Имя", 10));
-                  }));
+                Students.Remove(SelectedStudent);
             }
         }
 
-        private MyCommand deleteStudent;
-        public MyCommand DeleteStudent
+        private void AddStudent()
         {
-            get
-            {
-                return deleteStudent ??
-                    (deleteStudent = new MyCommand(obj =>
-                    {
-                        Student selectedStudent = obj as Student;
-                        if (selectedStudent != null)
-                        {
-                            Students.Remove(selectedStudent);
-                        }
-                    }));
-            }
+            Students.Add(new Student { FirstName = NewFirstName, Age = NewAge, LastName= NewLastName });
         }
 
-
-
-        private bool FilterStudent(object obj)
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
         {
-            bool result = true;
-            Student current = obj as Student;
-            if (!string.IsNullOrWhiteSpace(FilterText) && current != null && !current.FirstName.Contains(FilterText) && !current.LastName.Contains(FilterText) && !current.Age.ToString().Contains(FilterText))
-            {
-                result = false;
-            }
-            return result;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+      
     }
 
-    public class MyCommand : ICommand
-    {
-        
-        private Action<object> execute;
-        private Func<object, bool> canExecute;
-
-        public event EventHandler CanExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
-        }
-
-        public MyCommand(Action<object> execute, Func<object, bool> canExecute = null)
-        {
-            this.execute = execute;
-            this.canExecute = canExecute;
-        }
-
-        public bool CanExecute(object parameter)
-        {
-            return this.canExecute == null || this.canExecute(parameter);
-        }
-
-        public void Execute(object parameter)
-        {
-            this.execute(parameter);
-        }
-    }
 }
 
 

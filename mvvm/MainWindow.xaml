@@ -11,28 +11,26 @@
             <RowDefinition Height="auto"/>
             <RowDefinition />
         </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Margin="0,0,0,10" Grid.RowSpan="2">
 
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Фильтр" Margin="10,5,5,5"/>
-            <TextBox Text="{Binding FilterText,UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="5"/>
-        </StackPanel>
-        <DataGrid Grid.Row="1" Margin="-5,5,400,0" ItemsSource="{Binding Items, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName, UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Header="Имя" Binding="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Header="Возраст" Binding="{Binding Age, UpdateSourceTrigger=PropertyChanged}"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <StackPanel Margin="400,34,0,0" Grid.RowSpan="2">
-            <Button Width="100" Height="25" Content="Удалить" Command="{Binding DeleteStudent}" CommandParameter="{Binding SelectedItem, ElementName=yourDataGridName}" />
-            <Button Width="100" Height="25" Content="Добавить" Command="{Binding AddStudent}"/>
-            <Label Content="Фамилия" Width="100"/>
-            <TextBox x:Name="LastName" TextWrapping="Wrap" Text="" Width="120"/>
-            <Label Content="Имя" Width="100"/>
-            <TextBox x:Name="FirstName" TextWrapping="Wrap" Text="" Width="120"/>
-            <Label Content="Возраст" Width="100"/>
-            <TextBox x:Name="Age" TextWrapping="Wrap" Text="" Width="120"/>
-        </StackPanel>
+            <Grid Height="99">
+                <Label Content="Имя" HorizontalAlignment="Left" Margin="170,6,0,0" VerticalAlignment="Top"/>
+                <TextBox Text="{Binding NewFirstName, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="170,32,481,49" />
+                <Label Content="Фамилия" HorizontalAlignment="Left" Margin="335,6,0,0" VerticalAlignment="Top"/>
+                <TextBox Text="{Binding NewLastName, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="335,32,316,49"/>
+                <Label Content="Возраст" HorizontalAlignment="Left" Margin="496,6,0,0" VerticalAlignment="Top" Height="26"/>
+                <TextBox Text="{Binding NewAge, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="496,32,154,49"/>
+                <Button Content="Добавить" Command="{Binding AddStudentCommand}" Margin="257,60,427,15"/>
+                <Button Content="Удалить" Command="{Binding RemoveStudentCommand}" Margin="426,60,258,15"/>
+            </Grid>
 
+            <DataGrid ItemsSource="{Binding Students}" AutoGenerateColumns="False" SelectedItem="{Binding SelectedStudent}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding FirstName,ValidatesOnDataErrors=True}" />
+                    <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName,ValidatesOnDataErrors=True}" />
+                    <DataGridTextColumn Header="Возраст" Binding="{Binding Age,ValidatesOnDataErrors=True}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
     </Grid>
 </Window>

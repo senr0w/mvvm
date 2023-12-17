@@ -52,3 +52,32 @@ C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\obj\Debu
 C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\obj\Debug\mvvm.csproj.CopyComplete
 C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\obj\Debug\mvvm.exe
 C:\Users\User\Desktop\121\121 Учебная Практика\mvvm\mvvm\obj\Debug\mvvm.pdb
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\bin\Debug\mvvm.exe.config
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\bin\Debug\mvvm.exe
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\bin\Debug\mvvm.pdb
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\bin\Debug\CommonServiceLocator.dll
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\mvvm.csproj.AssemblyReference.cache
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\MainWindow.g.cs
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\App.g.cs
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\mvvm_MarkupCompile.cache
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\mvvm_MarkupCompile.lref
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\MainWindow.baml
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\mvvm.g.resources
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\mvvm.Properties.Resources.resources
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\mvvm.csproj.GenerateResource.cache
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\mvvm.csproj.CoreCompileInputs.cache
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\mvvm.csproj.CopyComplete
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\mvvm.exe
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\mvvm.pdb
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\Page\SelectStudent.g.cs
+C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\Page\SelectStudent.baml
