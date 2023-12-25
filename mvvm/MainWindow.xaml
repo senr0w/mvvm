@@ -13,15 +13,16 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Vertical" Margin="0,0,0,10" Grid.RowSpan="2">
 
-            <Grid Height="99">
+            <Grid Height="102" Width="793">
                 <Label Content="Имя" HorizontalAlignment="Left" Margin="170,6,0,0" VerticalAlignment="Top"/>
                 <TextBox Text="{Binding NewFirstName, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="170,32,481,49" />
                 <Label Content="Фамилия" HorizontalAlignment="Left" Margin="335,6,0,0" VerticalAlignment="Top"/>
                 <TextBox Text="{Binding NewLastName, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="335,32,316,49"/>
                 <Label Content="Возраст" HorizontalAlignment="Left" Margin="496,6,0,0" VerticalAlignment="Top" Height="26"/>
                 <TextBox Text="{Binding NewAge, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="496,32,154,49"/>
-                <Button Content="Добавить" Command="{Binding AddStudentCommand}" Margin="257,60,427,15"/>
-                <Button Content="Удалить" Command="{Binding RemoveStudentCommand}" Margin="426,60,258,15"/>
+                <Button Content="Добавить" Command="{Binding AddStudentCommand}" Margin="170,60,514,15"/>
+                <Button Content="Удалить" Command="{Binding RemoveStudentCommand}" Margin="335,60,349,15"/>
+                <Button Content="Студент" Click="NavigateToSecondWindow_Click" Margin="496,60,123,15" />
             </Grid>
 
             <DataGrid ItemsSource="{Binding Students}" AutoGenerateColumns="False" SelectedItem="{Binding SelectedStudent}">

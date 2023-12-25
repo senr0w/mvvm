@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight.Command;
 using mvvm.Model;
+using mvvm.Page;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -22,6 +23,7 @@ namespace mvvm.ViewModel
                 OnPropertyChanged(nameof(SelectedStudent));
             }
         }
+       
 
         private string _newFirstName;
         public string NewFirstName
@@ -77,8 +79,19 @@ namespace mvvm.ViewModel
 
         public StudentViewModel()
         {
+            NavigateToSecondWindowCommand = new RelayCommand(NavigateToSecondWindow);
             RemoveStudentCommand = new RelayCommand(RemoveSelectedStudent);
             AddStudentCommand = new RelayCommand(AddStudent);
+        } 
+        public ICommand NavigateToSecondWindowCommand { get; private set; }
+        private void NavigateToSecondWindow()
+        {
+            if (SelectedStudent != null)
+            {
+                // You can replace "SecondWindow" with the actual name of your second window class
+                SecondWindow secondWindow = new SecondWindow(SelectedStudent);
+                secondWindow.Show();
+            }
         }
 
         private void RemoveSelectedStudent()

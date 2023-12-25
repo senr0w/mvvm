@@ -81,3 +81,5 @@ C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\mvvm.exe
 C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\mvvm.pdb
 C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\Page\SelectStudent.g.cs
 C:\Users\chokolo5tr\Desktop\senr0w\mvvm-master\mvvm\obj\Debug\Page\SelectStudent.baml
+C:\Users\User\Desktop\mvvm-master\mvvm\obj\Debug\Page\SecondWindow.g.cs
+C:\Users\User\Desktop\mvvm-master\mvvm\obj\Debug\Page\SecondWindow.baml

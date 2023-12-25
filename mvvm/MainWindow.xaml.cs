@@ -18,5 +18,10 @@ namespace mvvm
             DataContext = new StudentViewModel();
     
         }
+        private void NavigateToSecondWindow_Click(object sender, RoutedEventArgs e)
+        {
+            var viewModel = DataContext as StudentViewModel;
+            viewModel?.NavigateToSecondWindowCommand.Execute(null);
+        }
     }
 }
